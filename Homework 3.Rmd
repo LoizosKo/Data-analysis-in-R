@@ -5,7 +5,13 @@ output:
     df_print: paged
   pdf_document: default
 ---
-
+[SYB61_T03_Population Growth Rates in Urban areas and Capital cities.csv](https://github.com/LoizosKo/helicopter/files/7741996/SYB61_T03_Population.Growth.Rates.in.Urban.areas.and.Capital.cities.csv)
+1. Examined the file in R. How many unique countries are there? What variables are available? Are the data in long form or in wide form?
+2. You need to make sure that only one type of information is stored in each column. If that is not the case, transform the data using applicable functions (verbs) from the tidyr package. 
+3. Now you want to merge the data with the gapminder dataset. Let's work with data from 2007 (so you might want to filter out the rest of the data). The problem is that your dataset with more refined population estimates does not have data for 2007, but it has data for 2005 and 2010. Can you somehow interpolate the data (i.e. predict what the values were in 2007)?  You might approach the problem in different way, but make sure to describe exactly what you did.
+4. After you merged the data, you can actually check how well you predicted the population. Remember that the gapminder dataset already has the population data for 2007. Calculate the absolute and the relative error of prediction using your technique of interpolation for each country in the data. What is the smallest error? What is the largest error? How on average did your interpolation perform?
+5. Calculate the proportion of the population in each country that live in the capital city. Give summary statistics for the distribution of this proportion. Plot the graph showing how gdp per capita is linked to the proportion of people living in a capital city. Plot a similar graph linking life expectancy and the proportion of people living in capital cities. Think about what is more logical to place on x and y axes.
+6. Plot the histogram of proportion of people living in rural areas in 2007 and the histogram of the proportion of people living in capital cities. Talk about summary statistics of these variables
 ```{r}
 library(tidyverse)
 library(readxl)
